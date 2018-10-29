@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parsers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>File</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parsers.each do |parser| %>
+      <tr>
+        <td><%= parser.title %></td>
+        <td><%= parser.file %></td>
+        <td><%= link_to 'Download Spreadsheet', parser %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parser', new_parser_path %>
